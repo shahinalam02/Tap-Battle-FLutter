@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
                         Center(
                           child: Text(
                             "${redscore >= 100 ? "Red" : "Blue"} won!!",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 40.0,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
@@ -80,7 +80,7 @@ class _MyAppState extends State<MyApp> {
                               bluescore = 50;
                             });
                           },
-                          child: Text("Reset Button"),
+                          child: const Text("Reset Button"),
                         ),
                       ],
                     ),
