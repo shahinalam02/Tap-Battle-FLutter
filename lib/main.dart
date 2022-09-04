@@ -61,14 +61,28 @@ class _MyAppState extends State<MyApp> {
                     width: double.infinity,
                     height: double.infinity,
                     color: redscore >= 100 ? Colors.redAccent : Colors.blue,
-                    child: Center(
-                      child: Text(
-                        "${redscore >= 100 ? "Red" : "Blue"} won!!",
-                        style: TextStyle(
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text(
+                            "${redscore >= 100 ? "Red" : "Blue"} won!!",
+                            style: TextStyle(
+                                fontSize: 40.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              redscore = 50;
+                              bluescore = 50;
+                            });
+                          },
+                          child: Text("Reset Button"),
+                        ),
+                      ],
                     ),
                   )
                 : Container(),
